@@ -18,7 +18,6 @@ func main() {
 	var values = [3]int{
 		90,
 		80,
-		75,
 	}
 
 	fmt.Println(values)
