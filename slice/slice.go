@@ -73,10 +73,11 @@ func main() {
 
 	iniArray := [5]int{1, 2, 3, 4, 5}    // Cuma sanggup 5
 	iniArray2 := [...]int{1, 2, 3, 4, 5} // Walaupun tidak didefine daya tampung-nya tapi, aslinya cuma sanggup 5. Karena sudah di-inisialization dengan 5 data
-	iniSlice := []int{1, 2, 3, 4, 5}     // length dan capability-nya adalah 5
+	iniSlice := []int{1, 2, 3, 4, 5}     // length dan capability-nya adalah 5 tapi, ini bisa lebih dinamis
 
 	fmt.Println(iniArray)
 	fmt.Println(iniArray2)
 	fmt.Println(iniSlice)
-
+	iniSlice = append(iniSlice, 6)       // Ini contoh dinamis dari slice. Di array tidak ada fungsi append.
+	fmt.Println(iniSlice)
 }
