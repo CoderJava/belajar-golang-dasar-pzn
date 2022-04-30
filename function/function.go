@@ -5,6 +5,7 @@ import "fmt"
 func main() {
 	sayHello()
 	sayHelloTo("Yudi", "Setiawan")
+	fmt.Println(getHello("Ditta"))
 }
 
 func sayHello() {
@@ -13,4 +14,8 @@ func sayHello() {
 
 func sayHelloTo(firstName string, lastName string) {
 	fmt.Println("Hello", firstName, lastName)
+}
+
+func getHello(name string) string {
+	return "Hello " + name
 }
