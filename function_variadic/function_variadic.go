@@ -3,17 +3,18 @@ package main
 import "fmt"
 
 func main() {
-	total := sumAll(10, 10, 10)
-	fmt.Println(total)
+	name, total := sumAll("Yudi", 10, 10, 10)
+	fmt.Println(name, total)
 
 	slice := []int{10, 10, 10, 10, 10}
-	fmt.Println(sumAll(slice...))
+	fmt.Println(sumAll("Budi", slice...))
 }
 
-func sumAll(numbers ...int) int {
+// Variadic function hanya bisa diletakkan di parameter terakhir atau yang paling kanan
+func sumAll(name string, numbers ...int) (string, []int) {
 	total := 0
 	for _, value := range numbers {
 		total += value
 	}
-	return total
+	return name, numbers
 }
