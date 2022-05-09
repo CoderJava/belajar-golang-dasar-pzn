@@ -34,7 +34,7 @@ func main() {
 	fmt.Println(customer3)
 }
 
-// Pakai style UpperCamelCase
+// Pakai style UpperCamelCase agar menjadi public (exported)
 type CustomerPremium struct {
 	FirstName, LastName string
 	Address             string
